@@ -1,5 +1,4 @@
 import Dashboard from "./Dashboard";
-import Timer, { Countdown } from "./components/Countdown";
 
 function App() {
   return (

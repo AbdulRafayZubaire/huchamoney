@@ -23,7 +23,7 @@ const Circle = ({ value, unit, total, count }) => {
                     <circle id='circle' cx="-40" cy="-40" r="70" stroke="black" stroke-width="3" strokeLinecap='round'  strokeDasharray={total} strokeDashoffset={value} transform="rotate(-180 25 25)" className='tablet:hidden' />
 
                     <circle cx="-30" cy="-30" r="60" stroke="#373942" stroke-width="3" strokeLinecap='round' strokeDashoffset="450" fill='none' strokeWidth={10} transform="rotate(-180 25 25)" className='hidden tablet:block' />
-                    <circle id='circle' cx="-30" cy="-30" r="60" stroke="black" stroke-width="3" strokeLinecap='round' strokeDasharray={total} strokeDashoffset={value} transform="rotate(-180 25 25)" className='hidden tablet:block' />
+                    <circle id='circle' cx="-30" cy="-30" r="60" stroke="black" stroke-width="3" strokeLinecap='round' strokeDasharray={380} strokeDashoffset={(value/450)*380} transform="rotate(-180 25 25)" className='hidden tablet:block' />
                 </svg>
             </div>
         </>
