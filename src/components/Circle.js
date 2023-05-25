@@ -9,7 +9,8 @@ const Circle = ({ value, unit }) => {
                     <h1 className='text-2xl font-bold'>20</h1>
                     <p className='text-lighttext'>{unit}</p>
                 </div>
-                <svg style={{ 'position': 'relative' }} className='h-[190px] w-[180px] mobile:h-[160px] mobile:w-[160px]'>
+                {/* <svg style={{ 'position': 'relative' }} className='h-[100%] w-[100%]'> */}
+                <svg style={{ 'position': 'relative' }} className='h-[170px] w-[170px] tablet:h-[160px] tablet:w-[160px]'>
                     <defs>
                         <linearGradient id='GradientColor' gradientTransform='rotate(80)'>
 
@@ -18,11 +19,11 @@ const Circle = ({ value, unit }) => {
                             <stop offset="100%" stopColor='#59BECF' />
                         </linearGradient>
                     </defs>
-                    <circle cx="-40" cy="-40" r="80" stroke="#373942" stroke-width="3" strokeLinecap='round' strokeDashoffset="450" fill='none' strokeWidth={10} transform="rotate(-180 25 25)" className='mobile:hidden' />
-                    <circle id='circle' cx="-40" cy="-40" r="80" stroke="black" stroke-width="3" strokeLinecap='round' strokeDashoffset={value} transform="rotate(-180 25 25)" className='mobile:hidden' />
+                    <circle cx="-40" cy="-40" r="70" stroke="#373942" stroke-width="3" strokeLinecap='round' strokeDashoffset="450" fill='none' strokeWidth={7} transform="rotate(-180 25 25)" className='tablet:hidden' />
+                    <circle id='circle' cx="-40" cy="-40" r="70" stroke="black" stroke-width="3" strokeLinecap='round' strokeDashoffset={value} transform="rotate(-180 25 25)" className='tablet:hidden' />
 
-                    <circle cx="-30" cy="-30" r="60" stroke="#373942" stroke-width="3" strokeLinecap='round' strokeDashoffset="450" fill='none' strokeWidth={10} transform="rotate(-180 25 25)" className='hidden mobile:block' />
-                    <circle id='circle' cx="-30" cy="-30" r="60" stroke="black" stroke-width="3" strokeLinecap='round' strokeDashoffset={value} transform="rotate(-180 25 25)" className='hidden mobile:block' />
+                    <circle cx="-30" cy="-30" r="60" stroke="#373942" stroke-width="3" strokeLinecap='round' strokeDashoffset="450" fill='none' strokeWidth={10} transform="rotate(-180 25 25)" className='hidden tablet:block' />
+                    <circle id='circle' cx="-30" cy="-30" r="60" stroke="black" stroke-width="3" strokeLinecap='round' strokeDashoffset={value} transform="rotate(-180 25 25)" className='hidden tablet:block' />
                 </svg>
             </div>
         </>

@@ -17,7 +17,8 @@ module.exports = {
         'primary': 'linear-gradient(10deg, #E63232 0%, #4950F6 46.87%, #59BECF 100%)',
       },
       screens: {
-        'mobile': { 'max': '550px' },
+        'mobile': { 'max': '600px' },
+        'tablet': { 'max': '1000px' },
         // 'laptop': { 'min': '551px'},
       },
       fontSize:{
