@@ -5,7 +5,7 @@ const Circle = ({ value, unit, total, count }) => {
         <>
             <div className='w-fit h-fit relative mobile:mx-auto mobile'>
 
-                <div className='absolute text-white top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center min-w-[60px]'>
+                <div className='absolute text-white top-[50%] left-[53%] translate-x-[-50%] translate-y-[-50%] text-center min-w-[60px]'>
                     <h1 className='text-2xl font-bold'>{count}</h1>
                     <p className='text-lighttext'>{unit}</p>
                 </div>
