@@ -22,6 +22,10 @@ module.exports = {
       },
       fontSize:{
         'md': '16px',
+        'xsm': '12px'
+      },
+      fontFamily:{
+        "cent": "Centauri"
       }
     },
     plugins: [],

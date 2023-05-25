@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-circle{
+@font-face {
+    font-family: "Centauri";
+    src: url(./font/FontsFree-Net-Centauri.ttf);
+}
+
+#circle{
     fill: none;
     stroke: url(#GradientColor);
     stroke-width: 10;
