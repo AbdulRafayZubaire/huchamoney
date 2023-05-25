@@ -18,7 +18,8 @@ module.exports = {
       },
       screens: {
         'mobile': { 'max': '600px' },
-        'tablet': { 'max': '1000px' },
+        'tablet': { 'max': '1023px' },
+        'tabletOnly': { 'min': '601px', 'max': '1023px' },
         // 'laptop': { 'min': '551px'},
       },
       fontSize:{

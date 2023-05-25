@@ -114,7 +114,7 @@ const Dashboard = () => {
                         <Circle value={-50} unit="Seconds" />
                     </div>
 
-                    <div id='buttons' className='flex tablet:flex-col gap-3 text-sm'>
+                    <div id='buttons' className='flex tabletOnly:flex-col flex-row gap-3 text-sm'>
                         <div className='bg-primary p-[2px] rounded-lg w-full'>
                             <button className='bg-dark hover:bg-primary w-full rounded-lg py-[4px] text-sm text-white'>Buy Hutcha</button>
                         </div>
