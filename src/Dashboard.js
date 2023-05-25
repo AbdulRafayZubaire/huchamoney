@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import LeftItem from './components/LeftItem'
 import logo from './images/dollar.svg'
 import image1 from './images/1.svg'
@@ -13,7 +13,33 @@ import ImageCard from './components/ImageCard'
 import Circle from './components/Circle'
 import logout from './images/logout.svg'
 
+
+var days, seconds, hours, minutes;
+var today = new Date()
+const targetTime = new Date().setDate(today.getDate() + 20);
+
 const Dashboard = () => {
+
+    const [currentTime, setCurrentTime] = useState(new Date(new Date().setDate(today.getDate() + 30)));
+
+    const timeBetween = targetTime - currentTime;
+    seconds = Math.floor((timeBetween / 1000) % 60);
+    minutes = Math.floor((timeBetween / 1000 / 60) % 60);
+    hours = Math.floor((timeBetween / (1000 * 60 * 60)) % 24);
+    days = Math.floor(timeBetween / (1000 * 60 * 60 * 24));
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentTime(Date.now());
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
+    useEffect(()=>{
+        console.log(days, hours, minutes, seconds);
+    }, [seconds])
+
+
     return (
         <div className='flex gap-4 mobile:flex-col'>
 
@@ -108,15 +134,15 @@ const Dashboard = () => {
                     {/* <h1 className=' text-white font-cent mobile:pr-10'>Time Till Withdrawal</h1> */}
 
                     <div id="circles" className='flex tablet:grid tablet:grid-cols-2 tablet:justify-center justify-between tablet:m-auto gap-4'>
-                        <Circle value={-100} unit="Days" />
-                        <Circle value={-120} unit="Hours" />
-                        <Circle value={-300} unit="Minutes" />
-                        <Circle value={-50} unit="Seconds" />
+                        <Circle value={-((days/20)*450)} total={450} unit="Days" count={days}/>
+                        <Circle value={-((hours/24)*450)} total={450} unit="Hours" count={hours}/>
+                        <Circle value={-((minutes/60)*450)} total={450} unit="Minutes" count={minutes}/>
+                        <Circle value={-((seconds/60)*450)} total={450} unit="Seconds" count={seconds}/>
                     </div>
 
                     <div id='buttons' className='flex tabletOnly:flex-col flex-row gap-3 text-sm'>
                         <div className='bg-primary p-[2px] rounded-lg w-full'>
-                            <button className='bg-dark hover:bg-primary w-full rounded-lg py-[4px] text-sm text-white'>Buy Hutcha</button>
+                            <button className='bg-dark hover:bg-primary w-full rounded-lg py-[4px] text-sm text-white' >Buy Hutcha</button>
                         </div>
                         <div className='bg-primary p-[2px] rounded-lg w-full'>
                             <button className='bg-dark hover:bg-primary text-white font-thin rounded-lg py-[4px] w-full'>Claim</button>
