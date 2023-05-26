@@ -198,7 +198,7 @@ const Dashboard = () => {
 
             </div>
             {/* Navigation Section */}
-            <div className={`justify-around items-center bg-dark w-[92%] rounded-xl border border-light py-2 px-4 hidden mobile:flex text-white fixed bottom-5`}>
+            <div className={`justify-around items-center bg-dark w-[92%] rounded-xl border border-light py-2 px-4 hidden mobile:flex text-white fixed bottom-0`}>
 
                 <button id="statsNav" className='flex flex-col justify-between gap-2 items-center h-full cursor-pointer' onClick={(e) => handleNavigate(e)}>
                     <img src={statsIcon} alt="stats-icon" className={`${!stats ? 'block' : 'hidden'}`} />
